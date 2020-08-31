@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>function with no arguments</Title>
+			<Shortcut>fn</Shortcut>
+			<Description>Code snippet for function with no argumnents</Description>
+			<Author>Luis Vega</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>return_type</ID>
+					<ToolTip>Return type</ToolTip>
+					<Default>void</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Function name</ToolTip>
+					<Default>MyFunction</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+                <![CDATA[
+					#pragma region $name$ //{
+						$return_type$
+						$name$ ()
+						{
+							#pragma region variables //{
+								$return_type$ result;
+
+							#pragma region //} variables
+							
+							//TODO:
+							$selected$$end$
+							
+							return result;
+						}
+					#pragma endregion //} $name$
+                ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

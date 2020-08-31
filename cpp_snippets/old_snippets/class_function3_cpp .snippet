@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>class function with three arguments</Title>
+			<Shortcut>cfn3</Shortcut>
+			<Description>Code snippet for function with three arguments</Description>
+			<Author>Luis Vega</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>return_type</ID>
+					<ToolTip>Return type</ToolTip>
+					<Default>void</Default>
+				</Literal>
+				<Literal>
+					<ID>class_name</ID>
+					<ToolTip>Return type</ToolTip>
+					<Default>void</Default>
+				</Literal>
+				<Literal>
+					<ID>func_name</ID>
+					<ToolTip>Function name</ToolTip>
+					<Default>MyFunction</Default>
+				</Literal>
+                
+                 <Literal>
+					<ID>argument1</ID>
+					<ToolTip>first argument</ToolTip>
+					<Default>void</Default>
+				</Literal>
+                <Literal>
+					<ID>argument2</ID>
+					<ToolTip>second argument</ToolTip>
+					<Default>void</Default>
+				</Literal>
+                <Literal>
+					<ID>argument3</ID>
+					<ToolTip>third argument</ToolTip>
+					<Default>void</Default>
+                </Literal>
+			</Declarations>
+			<Code Language="cpp">
+                <![CDATA[
+					#pragma region $func_name$ //{
+						$return_type$
+						$class_name$::$func_name$ (
+							$argument1$,
+                            $argument2$,
+                            $argument3$
+						) $extra_param$
+						{
+							#pragma region variables //{
+								$return_type$ result;
+
+							#pragma region //} variables
+							
+							//TODO:
+							$selected$$end$
+							
+							return result;
+						}
+					#pragma endregion //} $func_name$
+                ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

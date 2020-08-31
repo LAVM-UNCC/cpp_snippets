@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>function with five arguments</Title>
+			<Shortcut>fn5</Shortcut>
+			<Description>Code snippet for function with five arguments</Description>
+			<Author>Luis Vega</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+                <Literal>
+					<ID>return_type</ID>
+					<ToolTip>Return type</ToolTip>
+					<Default>void</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Function name</ToolTip>
+					<Default>MyFunction</Default>
+				</Literal>
+                <Literal>
+					<ID>argument1</ID>
+					<ToolTip>first argument</ToolTip>
+					<Default>void</Default>
+				</Literal>
+                <Literal>
+					<ID>argument2</ID>
+					<ToolTip>second argument</ToolTip>
+					<Default>void</Default>
+				</Literal>
+                <Literal>
+					<ID>argument3</ID>
+					<ToolTip>third argument</ToolTip>
+					<Default>void</Default>
+                </Literal>
+                <Literal>
+					<ID>argument4</ID>
+					<ToolTip>fourth argument</ToolTip>
+					<Default>void</Default>
+                </Literal>
+                <Literal>
+					<ID>argument5</ID>
+					<ToolTip>fifth argument</ToolTip>
+					<Default>void</Default>
+                </Literal>
+			</Declarations>
+			<Code Language="cpp">
+                <![CDATA[
+					#pragma region $name$ //{
+						$return_type$
+						$name$ (
+							$argument1$,
+                            $argument2$,
+                            $argument3$,
+                            $argument4$,
+                            $argument5$
+                        )
+                        {
+                            #pragma region variables //{
+								$return_type$ result;
+
+							#pragma region //} variables
+							
+							//TODO:
+							$selected$$end$
+							
+							return result;
+						}
+					#pragma endregion //} $name$
+                ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
